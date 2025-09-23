@@ -1,0 +1,50 @@
+/* Override Bootstrap dropdown arrows specifically for header */
+#main-header .navbar-nav .nav-link.dropdown-toggle::after,
+#main-header .navbar-nav .dropdown-toggle::after,
+#main-header .navbar .dropdown-toggle::after,
+#main-header .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove any ::after pseudo-elements from header nav links */
+#main-header .navbar-nav .nav-link::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove ::before pseudo-elements that might create arrows */
+#main-header .navbar-nav .nav-link::before {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Override Bootstrap dropdown-toggle class specifically */
+#main-header .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+}
+
+/* Target any element with dropdown functionality in header */
+#main-header [data-toggle="dropdown"]::after,
+#main-header [aria-expanded]::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+}
+
+/* Remove arrows from any Bootstrap dropdown components in header */
+#main-header .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}

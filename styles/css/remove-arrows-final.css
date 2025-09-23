@@ -1,0 +1,86 @@
+/* FINAL SOLUTION - Remove dropdown arrows from header navigation */
+/* This CSS will override Bootstrap and any other CSS that creates dropdown arrows */
+
+/* Target all possible dropdown arrow selectors in header */
+#main-header .navbar-nav .nav-link::after,
+#main-header .navbar-nav .nav-link::before,
+#main-header .dropdown-toggle::after,
+#main-header .dropdown-toggle::before,
+#main-header [data-toggle="dropdown"]::after,
+#main-header [data-toggle="dropdown"]::before,
+#main-header [aria-expanded]::after,
+#main-header [aria-expanded]::before,
+#main-header .nav-link.dropdown-toggle::after,
+#main-header .nav-link.dropdown-toggle::before {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  position: static !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Override Bootstrap dropdown arrow CSS specifically */
+#main-header .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Remove any arrow content from header navigation links */
+#main-header .navbar-nav .nav-link.no-dropdown-arrow::after,
+#main-header .navbar-nav .nav-link.no-dropdown-arrow::before {
+  display: none !important;
+  content: "" !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force remove any ::after or ::before content from header nav */
+#main-header .navbar-nav .nav-link::after,
+#main-header .navbar-nav .nav-link::before {
+  content: "" !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Override all Bootstrap dropdown arrow styles for header */
+#main-header .dropdown-toggle::after,
+#main-header .dropdown-toggle::before,
+#main-header .dropup .dropdown-toggle::after,
+#main-header .dropright .dropdown-toggle::after,
+#main-header .dropleft .dropdown-toggle::after,
+#main-header .dropleft .dropdown-toggle::before {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove arrows from any element that might have dropdown functionality in header */
+#main-header *[class*="dropdown"]::after,
+#main-header *[class*="dropdown"]::before {
+  display: none !important;
+  content: "" !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: none !important;
+}

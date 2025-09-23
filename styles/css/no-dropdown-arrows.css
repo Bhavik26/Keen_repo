@@ -1,0 +1,43 @@
+/* Remove dropdown arrows from header navigation - Most specific rule */
+#main-header .navbar-nav .nav-item .nav-link::after {
+  display: none !important;
+  content: none !important;
+}
+
+#main-header .navbar-nav .nav-link.dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Override Bootstrap dropdown arrows */
+#main-header .navbar .dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove any Bootstrap dropdown arrows globally for header */
+#main-header .dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hide any arrow content that might be showing */
+#main-header .nav-link[aria-expanded]::after,
+#main-header .nav-link[data-toggle="dropdown"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove all ::after pseudo-elements from header nav links */
+#main-header .navbar-nav .nav-link::after {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Also remove ::before pseudo-elements that might create arrows */
+#main-header .navbar-nav .nav-link::before {
+  display: none !important;
+  content: none !important;
+}

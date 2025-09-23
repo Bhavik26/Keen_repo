@@ -1,0 +1,330 @@
+@import "../color/variable.css";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900");
+
+/* Bootstrap import */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Font-awesome import */
+/* @import "~@fortawesome/fontawesome-free/css/all.min.css"; */
+
+/* Ionic icons import */
+/* @import "~ionicons/dist/css/ionicons.min.css"; */
+
+/* Animate css import */
+/* @import "~animate.css/animate.min.css"; */
+
+/*********************************************************
+  Uncomment this Code to enable latest version of Ionic icons
+  !!!! Warning : Old version of ionic font might not work !!!!
+
+  @import "~ionicons/dist/css/ionicons.min.css";
+*********************************************************/
+
+/* Owl carousal css import */
+/* @import "~owl.carousel/dist/assets/owl.carousel.css"; */
+/*@import "~owl.carousel/dist/assets/owl.theme.default.css";*/
+
+/* Custom css file import */
+/* @import "css/custom.css"; */
+
+/* Customize Style css*/
+/* @import "css/style-customizer.css"; */
+/* @import "~magnific-popup/dist/magnific-popup.css"; */
+
+.owl-nav .fa, .owl-nav .fas  {
+    font-weight: 900 !important;
+}
+
+/* Header styling */
+#main-header {
+  background-color: var(--header-bg-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#main-header .navbar-brand img {
+  max-height: 10px;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+#main-header .navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+#main-header .navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 600;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 6px;
+  margin: 0 10px;
+}
+
+#main-header .navbar-nav .nav-link:hover,
+#main-header .navbar-nav .nav-link.active {
+  color: #f0ad4e !important;
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+#main-header .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #f0ad4e;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+#main-header .navbar-nav .nav-link:hover::after,
+#main-header .navbar-nav .nav-link.active::after {
+  width: 80%;
+}
+
+/* Body padding to avoid content hidden behind fixed header */
+body {
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Hero section */
+.iq-banner {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.iq-banner .banner-text {
+  position: relative;
+  z-index: 2;
+}
+
+.iq-banner .type-head h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.iq-banner .iq-pt-15 {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: rgba(255,255,255,0.9);
+}
+
+.iq-banner .waves-box {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.iq-banner .iq-video {
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.iq-banner .iq-video:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+.iq-banner .button {
+  background: linear-gradient(45deg, #f0ad4e, #ff6b35);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.iq-banner .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.iq-banner .banner-img {
+  max-width: 100%;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Section styling */
+.iq-bg-over {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.iq-over-blue-90::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+.overview-block-pt {
+  padding-top: 80px;
+}
+
+.jarallax {
+  position: relative;
+}
+
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Section styles */
+.section-padding {
+  padding: 80px 0;
+}
+
+.iq-tw-7 {
+  font-weight: 700;
+}
+
+.iq-mb-25 {
+  margin-bottom: 25px;
+}
+
+.iq-works-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pull-right {
+  float: right;
+}
+
+.iq-mt-20 {
+  margin-top: 20px;
+}
+
+.iq-tw-6 {
+  font-weight: 600;
+}
+
+.iq-mb-15 {
+  margin-bottom: 15px;
+}
+
+.iq-mt-25 {
+  margin-top: 25px;
+}
+
+/* Button styling */
+.button {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.bt-black {
+  background: #333;
+}
+
+.bt-black:hover {
+  background: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .iq-banner .type-head h1 {
+    font-size: 2.5rem;
+  }
+  .iq-banner .iq-pt-15 {
+    font-size: 1.1rem;
+  }
+  .iq-banner {
+    padding: 60px 0;
+  }
+  body {
+    padding-top: 120px;
+  }
+  #main-header {
+    display: block;
+  }
+  header#main-header .navbar .menu {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+  header#main-header .navbar .menu li {
+    display: block;
+    margin: 0;
+  }
+  header#main-header .navbar .menu li a {
+    padding: 10px 15px;
+    display: block;
+    color: white !important;
+  }
+  header#main-header .navbar .menu li .sub-menu {
+    position: static;
+    display: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  header#main-header .navbar .menu li:hover > .sub-menu {
+    display: block !important;
+  }
+}

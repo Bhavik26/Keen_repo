@@ -1,0 +1,105 @@
+/* Remove dropdown arrows from navigation menu */
+
+/* Remove Bootstrap dropdown arrows from navigation */
+.navbar-nav .nav-link.dropdown-toggle::after,
+.navbar-nav .dropdown-toggle::after,
+.navbar .dropdown-toggle::after,
+.dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove any ::after pseudo-elements from nav links */
+.navbar-nav .nav-link::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove ::before pseudo-elements that might create arrows */
+.navbar-nav .nav-link::before {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Override Bootstrap dropdown-toggle class specifically */
+.dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+}
+
+/* Target any element with dropdown functionality in navigation */
+[data-toggle="dropdown"]::after,
+[aria-expanded]::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+}
+
+/* Remove arrows from any Bootstrap dropdown components in navigation */
+.dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove FontAwesome arrows if any */
+.navbar-nav .nav-link .fa-angle-down,
+.navbar-nav .nav-link .fa-chevron-down,
+.navbar-nav .nav-link .fa-caret-down {
+  display: none !important;
+}
+
+/* Remove any arrow icons from navigation */
+.navbar-nav .nav-link i {
+  display: none !important;
+}
+
+/* Remove any CSS-generated arrows using content property */
+.navbar-nav .nav-link[aria-expanded="true"]::after,
+.navbar-nav .nav-link[aria-expanded="false"]::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Remove any arrow from menu items that have children */
+.navbar-nav .nav-item.has-children .nav-link::after,
+.navbar-nav .nav-item.menu-item-has-children .nav-link::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Remove any arrow from dropdown menu items */
+.dropdown-menu .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Remove any arrow from mobile menu */
+.navbar-toggler::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Mobile navigation specific styles */
+.mobile-menu .nav-link::after,
+.mobile-nav .nav-link::after,
+.nav-mobile .nav-link::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Remove arrows from offcanvas navigation */
+.offcanvas .navbar-nav .nav-link::after,
+.offcanvas .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+}

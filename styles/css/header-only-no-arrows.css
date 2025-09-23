@@ -1,0 +1,24 @@
+/* Remove dropdown arrows ONLY from header navigation - Very specific */
+#main-header .navbar-nav .nav-link::after {
+  display: none !important;
+  content: "" !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#main-header .navbar-nav .nav-link.dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Target only header dropdown toggles */
+#main-header .navbar .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Only affect header dropdown elements */
+#main-header .dropdown-toggle::after {
+  display: none !important;
+  content: "" !important;
+}

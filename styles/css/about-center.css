@@ -1,0 +1,37 @@
+.about-section {
+  text-align: center !important;
+}
+
+.about-section .heading-title {
+  text-align: center !important;
+}
+
+.about-section .heading-title h3 {
+  text-align: center !important;
+}
+
+.about-section .heading-title p {
+  text-align: center !important;
+}
+
+.about-section .card {
+  text-align: center !important;
+}
+
+.about-section .card h5 {
+  text-align: center !important;
+}
+
+.about-section .card p {
+  text-align: center !important;
+}
+
+.about-section ul {
+  text-align: center !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.about-section li {
+  text-align: center !important;
+}
